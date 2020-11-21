@@ -15,3 +15,5 @@ jobs:
         run: echo "bintray.user=user" > "local.properties" && echo "bintray.apikey=apikey" >> "local.properties"
       - name: Build project
         run: ./gradlew assembleDebug
+      - name: Run tests
+        run: ./gradlew test
