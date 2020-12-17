@@ -521,6 +521,7 @@
     <string name="ml_external_storage_accept">Да</string>
     <string name="ml_external_storage_decline">Нет</string>
     <string name="auto_last_added_media">Недавно добавленное</string>
+    <string name="auto_my_library">Моя библиотека</string>
     <string name="no">Нет</string>
     <string name="loading_medialibrary">Загрузка медиатеки…</string>
     <string name="yes">Да</string>
@@ -768,4 +769,6 @@
     <string name="air_action_previous">Воспроизведение предыдущего</string>
     <string name="allow_otg">Разрешить доступ к OTG</string>
     <string name="allow_otg_description">Выберите OTG-устройство, чтобы разрешить VLC доступ к нему.</string>
+    <string name="remove_from_history">Удалить из истории</string>
+    <string name="apply_to_all">Применить ко всем видео</string>
 </resources>
