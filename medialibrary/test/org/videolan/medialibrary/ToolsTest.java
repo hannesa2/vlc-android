@@ -1,6 +1,9 @@
 package org.videolan.medialibrary;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -10,6 +13,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 
+@RunWith(JUnit4.class)
 public class ToolsTest {
 
     @Test
