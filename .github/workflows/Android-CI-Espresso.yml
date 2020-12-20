@@ -27,5 +27,5 @@ jobs:
         uses: malinskiy/action-android/install-sdk@release/0.1.0
       - name: Prepare build
         run: echo "bintray.user=user" > "local.properties" && echo "bintray.apikey=apikey" >> "local.properties"
-      - name: Build project
+      - name: Check
         run: ./gradlew check
