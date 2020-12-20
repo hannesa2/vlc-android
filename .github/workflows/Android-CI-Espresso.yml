@@ -15,3 +15,17 @@ jobs:
         run: echo "bintray.user=user" > "local.properties" && echo "bintray.apikey=apikey" >> "local.properties"
       - name: Build project
         run: ./gradlew assembleDebug
+      - name: Run tests
+        run: ./gradlew test
+  check:
+    name: Run checks
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Android SDK
+        uses: malinskiy/action-android/install-sdk@release/0.1.0
+      - name: Prepare build
+        run: echo "bintray.user=user" > "local.properties" && echo "bintray.apikey=apikey" >> "local.properties"
+      - name: Check
+        run: ./gradlew check
