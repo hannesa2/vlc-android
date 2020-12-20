@@ -15,3 +15,21 @@ jobs:
         run: echo "bintray.user=user" > "local.properties" && echo "bintray.apikey=apikey" >> "local.properties"
       - name: Build project
         run: ./gradlew assembleDebug
+      - name: Run tests
+        run: ./gradlew test
+      - name: Run instrumentation tests
+        uses: hannesa2/action-android/emulator-run-cmd@0.0.7.7
+        with:
+          cmd: ./gradlew cAT
+          api: 28
+          tag: default
+          abi: x86
+      - name: Save Espresso output
+        uses: actions/upload-artifact@master
+        if: ${{ always() }}
+        with:
+          name: VLC-Espresso
+          path: |
+            artifacts/logcat.log
+            ./**/build/reports/**/connected
+          if-no-files-found: error
